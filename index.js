@@ -6,8 +6,10 @@ const cancel = document.querySelector(".cancel");
 
 burgerMenu.addEventListener("click", () => {
   nav.style.display = "inline";
+  cancel.style.display = "inline"
 });
 
 cancel.addEventListener("click", () => {
   nav.style.display = "none";
+  cancel.style.display = "none"
 });

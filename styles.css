@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,14 @@
   overflow-x: hidden;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+}
 /* Header */
 header {
-  background-color: rgb(43, 43, 43);
-  padding: 5% 3%;
+  background-color: #1a1e1f;
+  padding: 3%;
   display: flex;
   justify-content: space-between;
   /* position: fixed; */
@@ -31,7 +36,12 @@ ul {
   position: relative;
   list-style: none;
   animation: fallDown 1s ease-in-out forwards;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: top;
+  padding: 45% 6% 0% 0%;
+  gap: 8%;
 }
 
 nav {
@@ -46,7 +56,138 @@ nav {
 }
 
 .cancel {
+  display: none;
   position: absolute;
   top: 4%;
   right: 6%;
+  z-index: 1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.section-image-background {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15% 3%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.background-img {
+  background-image: url(./assets/for-web2-980x400.webp);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.info {
+  background-color: #2b2b2b;
+  padding: 6% 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.text {
+  color: white;
+}
+.more {
+  color: #00aef3;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.courses-section {
+  background-color: #161616;
+  padding: 3%;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+}
+
+.course {
+  width: 100%;
+  border: solid 0.1px gray;
+}
+
+.course-img {
+  width: 100%;
+}
+
+h3{
+  color: #fff;
+  font-size: 22px;
+  margin: 35px 0;
+}
+
+.date{
+  color: #fff;
+  /* font-size: 22px; */
+}
+
+.details-div{
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 5%;
+  font-size: 20px;
+}
+
+.course-details{
+  color: #00AEEF;
+}
+
+.title, .date, .details-div{
+  margin-left: 10%;
+}
+
+.slider-section{
+  background-color: #2B2B2B;
+  padding: 3%;
+}
+
+.question-section{
+  background-color: #161616;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.questions-title{
+  /* color: #00AEEF; */
+}
+
+.all-questions{
+  color: #00aef3;
+  font-size: 20px;
+  font-weight: 900;
+  display: inline-block;
+  align-self: center;
+  margin-top: 35px;
+}
+
+.question-div{
+ color: #fff;
+ font-size: 16px;
+ border-bottom: solid 0.1px gray;
+}
+
+.question{
+  margin-bottom: 20px;
+  font-size: 13px;
 }
