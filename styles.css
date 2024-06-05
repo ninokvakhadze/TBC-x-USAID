@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   overflow-x: hidden;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
 }
@@ -66,6 +66,8 @@ nav {
 a {
   color: white;
   text-decoration: none;
+  font-family: "Noto Serif Georgian", serif;
+  font-family: "Noto Serif Georgian", serif;
 }
 
 .section-image-background {
@@ -79,8 +81,8 @@ a {
 h2 {
   color: white;
   font-size: 30px;
-  font-weight: 900;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-family: "Noto Serif Georgian", serif;
   font-optical-sizing: auto;
 }
 
@@ -100,11 +102,13 @@ h2 {
 }
 .text {
   color: white;
+  font-family: "Noto Serif Georgian", serif;
 }
 .more {
   color: #00aef3;
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Noto Serif Georgian", serif;
 }
 
 .courses-section {
@@ -112,8 +116,10 @@ h2 {
   padding: 3%;
 }
 
-h2 {
+.section-title {
   margin: 20px 0;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .courses {
@@ -130,18 +136,20 @@ h2 {
   width: 100%;
 }
 
-h3{
+h3 {
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   margin: 35px 0;
+  font-family: "Noto Serif Georgian", serif;
 }
 
-.date{
+.date {
   color: #fff;
   /* font-size: 22px; */
+  font-family: "Noto Serif Georgian", serif;
 }
 
-.details-div{
+.details-div {
   margin-top: 60px;
   margin-bottom: 30px;
   display: flex;
@@ -149,30 +157,37 @@ h3{
   font-size: 20px;
 }
 
-.course-details{
-  color: #00AEEF;
+.course-details {
+  color: #00aeef;
+  font-family: "Noto Serif Georgian", serif;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.title, .date, .details-div{
+.title,
+.date,
+.details-div {
   margin-left: 10%;
 }
 
-.slider-section{
-  background-color: #2B2B2B;
+.slider-section {
+  background-color: #2b2b2b;
   padding: 3%;
 }
 
-.question-section{
+.question-section {
   background-color: #161616;
   padding: 3%;
   display: flex;
   flex-direction: column;
 }
-.questions-title{
+.questions-title {
   /* color: #00AEEF; */
+  font-family: "Noto Serif Georgian", serif;
+  font-weight: 400;
 }
 
-.all-questions{
+.all-questions {
   color: #00aef3;
   font-size: 20px;
   font-weight: 900;
@@ -181,13 +196,48 @@ h3{
   margin-top: 35px;
 }
 
-.question-div{
- color: #fff;
- font-size: 16px;
- border-bottom: solid 0.1px gray;
+.question-result-div {
+  border-bottom: solid 0.1px gray;
 }
 
-.question{
+.question-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question {
   margin-bottom: 20px;
   font-size: 13px;
+  font-family: "Noto Serif Georgian", serif;
+  color: #fff;
+}
+
+footer {
+  background-color: rgb(35, 35, 35);
+  padding: 3%;
+}
+
+.copyright, .Terms-and-Conditions {
+  color: white;
+  font-family: "Noto Serif Georgian", serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.button-svg-div{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+button{
+  color: #fff;
+  padding: 10px 25px;
+  background-color: #00aeef;
+  border: none;
+  border-radius: 10px;
+  font-family: "Noto Serif Georgian", serif;
+  font-size: 12px;
 }
