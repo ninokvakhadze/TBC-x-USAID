@@ -26,7 +26,6 @@ header {
 }
 
 .slider {
-
   width: 100%;
   margin: auto;
   overflow: hidden;
@@ -36,15 +35,16 @@ header {
   display: flex;
   transition: transform 0.5s ease-in-out;
   position: relative;
-  height: 100px;
+  height: 300px;
 }
 
 .slide {
   min-width: 100%;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 20%;
+  gap: 100px;
   align-items: center;
   position: absolute;
   width: 100%;
@@ -56,7 +56,6 @@ header {
   opacity: 1;
 }
 
-
 .slide img {
   display: block;
 }
@@ -66,7 +65,7 @@ header {
   width: 90%;
   top: 50%;
   left: 50%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   transform: translate(-50%);
   color: white;
@@ -75,10 +74,12 @@ header {
 .arrows span {
   cursor: pointer;
   padding: 16px;
-  background: rgba(0, 0, 0, 0.5);
   user-select: none;
 }
-
+.prev,
+.next {
+  width: 20px;
+}
 .dots {
   text-align: center;
   padding: 10px;
@@ -147,6 +148,13 @@ a {
   text-decoration: none;
   font-family: "Noto Serif Georgian", serif;
 }
+a:hover {
+  color: #00aef3;
+}
+.path {
+  color: #00aef3;
+  transition-duration: 1s;
+}
 /* section1 */
 .section-image-background {
   background: rgba(0, 0, 0, 0.5);
@@ -191,6 +199,10 @@ h2 {
   font-size: 130%;
   font-weight: 600;
   font-family: "Noto Serif Georgian", serif;
+}
+.more:hover {
+  color: gray;
+  transition-duration: 1s;
 }
 
 /* section2 */
@@ -247,6 +259,11 @@ h3 {
   font-size: 100%;
 }
 
+.course-details:hover {
+  color: #006489;
+  transition-duration: 1s;
+}
+
 .title,
 .date,
 .details-div {
@@ -256,7 +273,7 @@ h3 {
 /* section4 */
 .slider-section {
   background-color: #2b2b2b;
-  padding: 5%;
+  padding: 5% 5%;
 }
 
 .question-section {
@@ -274,10 +291,15 @@ h3 {
   align-self: center;
   margin-top: 35px;
 }
+.all-questions:hover {
+  color: gray;
+  transition-duration: 1s;
+}
 
 .question-result-div {
   border-bottom: solid 0.1px gray;
   margin-top: 20px;
+  padding-bottom: 22px;
 }
 
 .question-div {
@@ -291,6 +313,22 @@ h3 {
   font-family: "Noto Serif Georgian", serif;
   color: #fff;
 }
+
+.result {
+  display: none;
+}
+
+.show {
+  display: inline;
+  color: #fff;
+  font-size: 60%;
+  font-family: "Noto Serif Georgian", serif;
+}
+
+/* .result-span{
+
+} */
+
 /* footer */
 footer {
   background-color: rgb(35, 35, 35);
@@ -336,6 +374,11 @@ button {
   grid-area: button;
 }
 
+button:hover{
+  background-color: #d9d9d9;
+  transition-duration: 1s;
+  color: black;
+}
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
@@ -370,7 +413,7 @@ button {
   .courses {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8%;
     row-gap: 30px;
   }
@@ -477,6 +520,24 @@ button {
   .svg-div {
     justify-self: end;
   }
+  .question {
+    font-size: 110%;
+  }
+  .show {
+    font-size: 100%;
+  }
+
+  .slides {
+    height: 100px;
+  }
+
+  .slide {
+    flex-direction: unset;
+    gap: 5%;
+  }
+  .arrows {
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -508,7 +569,7 @@ button {
     width: 30%;
   }
   .slider-section {
-    padding: 10%;
+    padding: 2% 10%;
   }
 
   .section-title {
@@ -525,10 +586,14 @@ button {
   .question-section {
     padding: 14%;
     display: grid;
-    grid: "title all"
-    "questions questions";
+    grid:
+      "title all"
+      "questions questions";
   }
   footer {
     padding: 5% 10%;
+  }
+  .slide {
+    gap: 20%;
   }
 }
