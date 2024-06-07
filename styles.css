@@ -13,11 +13,90 @@ body {
 /* Header */
 header {
   background-color: #1a1e1f;
-  padding: 3%;
+  padding: 5%;
   display: flex;
   justify-content: space-between;
   /* position: fixed; */
   width: 100%;
+  z-index: 9;
+}
+
+.slider-section {
+  position: relative;
+}
+
+.slider {
+
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  height: 100px;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active-slide {
+  opacity: 1;
+}
+
+
+.slide img {
+  display: block;
+}
+
+.arrows {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%);
+  color: white;
+}
+
+.arrows span {
+  cursor: pointer;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.dots {
+  text-align: center;
+  padding: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
 }
 
 @keyframes fallDown {
@@ -58,8 +137,8 @@ nav {
 .cancel {
   display: none;
   position: absolute;
-  top: 4%;
-  right: 6%;
+  top: 5%;
+  right: 5%;
   z-index: 1;
 }
 
@@ -67,12 +146,11 @@ a {
   color: white;
   text-decoration: none;
   font-family: "Noto Serif Georgian", serif;
-  font-family: "Noto Serif Georgian", serif;
 }
-
+/* section1 */
 .section-image-background {
   background: rgba(0, 0, 0, 0.5);
-  padding: 15% 3%;
+  padding: 15% 5%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,10 +158,14 @@ a {
 
 h2 {
   color: white;
-  font-size: 30px;
+  font-size: 200%;
   font-weight: 800;
   font-family: "Noto Serif Georgian", serif;
   font-optical-sizing: auto;
+}
+
+.title-span {
+  font-size: 70%;
 }
 
 .background-img {
@@ -95,7 +177,7 @@ h2 {
 }
 .info {
   background-color: #2b2b2b;
-  padding: 6% 3%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -106,25 +188,27 @@ h2 {
 }
 .more {
   color: #00aef3;
-  font-size: 18px;
+  font-size: 130%;
   font-weight: 600;
   font-family: "Noto Serif Georgian", serif;
 }
 
+/* section2 */
 .courses-section {
   background-color: #161616;
-  padding: 3%;
+  padding: 5%;
 }
 
 .section-title {
   margin: 20px 0;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 150%;
+  font-weight: 300;
 }
 
 .courses {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 
 .course {
@@ -138,14 +222,14 @@ h2 {
 
 h3 {
   color: #fff;
-  font-size: 20px;
+  font-size: 130%;
   margin: 35px 0;
   font-family: "Noto Serif Georgian", serif;
 }
 
 .date {
   color: #fff;
-  /* font-size: 22px; */
+  font-size: 90%;
   font-family: "Noto Serif Georgian", serif;
 }
 
@@ -154,14 +238,13 @@ h3 {
   margin-bottom: 30px;
   display: flex;
   gap: 5%;
-  font-size: 20px;
 }
 
 .course-details {
   color: #00aeef;
   font-family: "Noto Serif Georgian", serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 100%;
 }
 
 .title,
@@ -170,26 +253,22 @@ h3 {
   margin-left: 10%;
 }
 
+/* section4 */
 .slider-section {
   background-color: #2b2b2b;
-  padding: 3%;
+  padding: 5%;
 }
 
 .question-section {
   background-color: #161616;
-  padding: 3%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
-}
-.questions-title {
-  /* color: #00AEEF; */
-  font-family: "Noto Serif Georgian", serif;
-  font-weight: 400;
 }
 
 .all-questions {
   color: #00aef3;
-  font-size: 20px;
+  font-size: 140%;
   font-weight: 900;
   display: inline-block;
   align-self: center;
@@ -198,6 +277,7 @@ h3 {
 
 .question-result-div {
   border-bottom: solid 0.1px gray;
+  margin-top: 20px;
 }
 
 .question-div {
@@ -207,37 +287,248 @@ h3 {
 
 .question {
   margin-bottom: 20px;
-  font-size: 13px;
+  font-size: 80%;
   font-family: "Noto Serif Georgian", serif;
   color: #fff;
 }
-
+/* footer */
 footer {
   background-color: rgb(35, 35, 35);
-  padding: 3%;
+  padding: 10% 5%;
+  display: grid;
+  grid:
+    "TBC TBC"
+    "button svg"
+    "footer-text footer-text";
+  justify-content: space-between;
+  row-gap: 20px;
 }
 
-.copyright, .Terms-and-Conditions {
+.tbc-footer {
+  grid-area: TBC;
+}
+.footer-text-div {
+  grid-area: footer-text;
+}
+
+.copyright,
+.Terms-and-Conditions {
   color: white;
   font-family: "Noto Serif Georgian", serif;
-  font-size: 12px;
+  font-size: 90%;
   font-weight: 400;
-  margin-top: 10px;
 }
 
-.button-svg-div{
+.svg-div {
   display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  gap: 5%;
+  grid-area: svg;
 }
 
-button{
+button {
   color: #fff;
   padding: 10px 25px;
   background-color: #00aeef;
   border: none;
   border-radius: 10px;
   font-family: "Noto Serif Georgian", serif;
-  font-size: 12px;
+  font-size: 80%;
+  grid-area: button;
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 3% 5%;
+  }
+  a {
+    font-size: 150%;
+  }
+
+  .section-image-background {
+    padding: 15% 5%;
+  }
+
+  h2 {
+    font-size: 300%;
+  }
+  .text {
+    font-size: 200%;
+    font-weight: 500;
+  }
+  .more {
+    font-size: 150%;
+  }
+
+  .section-title {
+    margin: 30px 0;
+    font-size: 180%;
+    font-weight: 300;
+  }
+
+  .courses {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8%;
+    row-gap: 30px;
+  }
+
+  .course {
+    width: 45%;
+  }
+
+  .all-questions {
+    font-size: 160%;
+  }
+
+  .question {
+    font-size: 90%;
+  }
+
+  button {
+    font-size: 130%;
+  }
+
+  .svg-div {
+    gap: 10%;
+    height: 40px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1020px) {
+  main {
+    padding-top: 100px;
+  }
+  header {
+    padding: 2% 2%;
+    position: fixed;
+    height: 100px;
+  }
+  .header-logo {
+    width: 20%;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  ul {
+    background-color: #1a1e1f;
+    height: unset;
+    position: relative;
+    list-style: none;
+    animation: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: unset;
+  }
+
+  nav {
+    position: unset;
+    display: inline;
+    width: 100%;
+    height: unset;
+    background-color: unset;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  a {
+    font-size: 90%;
+  }
+
+  .section-image-background {
+    padding: 10% 2%;
+  }
+
+  .info {
+    padding: 2%;
+  }
+
+  .courses-section {
+    padding: 2%;
+  }
+
+  .courses {
+    gap: 20px 5%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .course {
+    width: 30%;
+  }
+  .slider-section {
+    padding: 2%;
+  }
+
+  .question-section {
+    padding: 6%;
+  }
+  footer {
+    padding: 5% 2%;
+    grid:
+      "TBC svg"
+      "footer-text button";
+  }
+  .svg-div {
+    justify-self: end;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  header {
+    padding: 2% 10%;
+  }
+
+  .burger {
+    width: 30px;
+  }
+  .section-image-background {
+    padding: 10%;
+  }
+
+  .info {
+    padding: 10%;
+  }
+
+  .courses-section {
+    padding: 10%;
+  }
+
+  .courses {
+    gap: 20px 5%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .course {
+    width: 30%;
+  }
+  .slider-section {
+    padding: 10%;
+  }
+
+  .section-title {
+    grid-area: title;
+  }
+  .all-questions {
+    grid-area: all;
+    margin: 0;
+    justify-self: end;
+  }
+  .questions {
+    grid-area: questions;
+  }
+  .question-section {
+    padding: 14%;
+    display: grid;
+    grid: "title all"
+    "questions questions";
+  }
+  footer {
+    padding: 5% 10%;
+  }
 }
